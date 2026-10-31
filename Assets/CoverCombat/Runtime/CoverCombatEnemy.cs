@@ -37,7 +37,7 @@ namespace CoverCombat
             Play(HiddenState);
         }
         bool UsesSidePeek => style == CoverEnemyStyle.SidePeek && animationMode != CoverEnemyAnimationMode.Gunplay;
-        bool UsesScriptedMovement => UsesSidePeek && !animator;
+        bool UsesScriptedMovement => UsesSidePeek;
         string HiddenState => animationMode == CoverEnemyAnimationMode.Gunplay || UsesSidePeek ? hideState : idleState;
         void Play(string state)
         {
